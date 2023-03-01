@@ -55,3 +55,31 @@ A simple game where a player selects a fighter, and the computer's fighter is se
 - Node
 - Vuex
 - Typescript
+
+********************************************************************
+
+## Implementation
+
+### Part I
+
+1. Set up a simple Json server and DB, follow this structure
+  - ./
+    - data/
+      - fighters.json
+        - create one entry for testing
+      - server.js
+        - bare bones json server
+
+2. Create the components
+  - FighterBattleCard
+  - FightersList
+  - WinnerDisplay
+
+3. Link components to DB
+  - first get the name to populate
+
+4. Add main Styles for the App
+
+5. Implement the Vuex Store
+
+6. Complete the Fighter Card
