@@ -32,8 +32,8 @@ export default {
   name: "DragonballFight",
   data() {
     return {
-      // defaultFighter: {name: "Player", attack: 0, defense: 0,hp: 0,
-      //   speed: 0,},
+      defaultFighter: {name: "Player", attack: 0, defense: 0,hp: 0,
+        speed: 0,},
       fighters: [
         {
           "id": "fighter-1",
@@ -43,7 +43,7 @@ export default {
           "hp": 100,
           "speed": 180,
           "type": "Type",
-          "imageUrl": "@/images/goku.png"
+          "imageUrl": "./images/goku.png"
         },
         {
           "id": "fighter-2",
@@ -53,9 +53,12 @@ export default {
           "hp": 90,
           "speed": 190,
           "type": "Type",
-          "imageUrl": "@/images/android17_2.png"
+          "imageUrl": "./images/android17.png"
         },
-      ]
+      ],
+      selectedFighterId: undefined,
+      selectedFighter: undefined,
+      fightWinner: undefined
     };
   },
   components: {
