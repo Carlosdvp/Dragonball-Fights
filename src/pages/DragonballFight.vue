@@ -36,24 +36,64 @@ export default {
         speed: 0,},
       fighters: [
         {
-          "id": "fighter-1",
-          "name": "Goku",
-          "attack": 160,
-          "defense": 140,
-          "hp": 100,
-          "speed": 180,
-          "type": "Type",
-          "imageUrl": "./images/goku.png"
+          id: "fighter-1",
+          name: "Goku",
+          attack: 160,
+          defense: 140,
+          hp: 100,
+          speed: 180,
+          type: "Type",
+          imageUrl: "src/images/goku.png"
         },
         {
-          "id": "fighter-2",
-          "name": "Android 17",
-          "attack": 150,
-          "defense": 110,
-          "hp": 90,
-          "speed": 190,
-          "type": "Type",
-          "imageUrl": "./images/android17.png"
+          id: "fighter-2",
+          name: "Android 17",
+          attack: 150,
+          defense: 110,
+          hp: 90,
+          speed: 190,
+          type: "Type",
+          imageUrl: "src/images/android17.png"
+        },
+        {
+          id: "fighter-3",
+          name: "Cell",
+          attack: 120,
+          defense: 120,
+          hp: 200,
+          speed: 100,
+          type: "Type",
+          imageUrl: "src/images/cell.jpg"
+        },
+        {
+          id: "fighter-4",
+          name: "Freeza",
+          attack: 110,
+          defense: 90,
+          hp: 90,
+          speed: 80,
+          type: "Type",
+          imageUrl: "src/images/freeza.jpg"
+        },
+        {
+          id: "fighter-5",
+          name: "Vegeta",
+          attack: 170,
+          defense: 130,
+          hp: 100,
+          speed: 170,
+          type: "Type",
+          imageUrl: "src/images/vegeta.png"
+        },
+        {
+          id: "fighter-6",
+          name: "Kefla",
+          attack: 120,
+          defense: 130,
+          hp: 90,
+          speed: 130,
+          type: "Type",
+          imageUrl: "src/images/kefla.jpg"
         },
       ],
       selectedFighterId: undefined,
@@ -145,7 +185,6 @@ export default {
 
 .start-battle-button {
   color: white;
-/*  font-family: $font-family-root;*/
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -155,11 +194,11 @@ export default {
 /*  box-shadow: $box-shadow-button;*/
   pointer-events: visible;
   height: 45px;
-/*  background-color: $active-button;*/
+  background-color: darkblue;
 }
 
 .v-btn--disabled.start-battle-button.inactive {
-/*  background-color: $inactive-button;*/
+  background-color: darkgreen;
   color: white;
 }
 </style>

@@ -52,3 +52,45 @@ export default {
     </div>
   </div>
 </template>
+
+<style scoped>
+
+.list-fighters {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.title-select-fighter {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.image {
+  width: 136px;
+  height: 99px;
+  border-radius: 7px;
+}
+
+.card-fighter {
+  width: 150px;
+  height: 139px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 7px;
+  padding: 7px !important;
+/*  box-shadow: $box-shadow;*/
+  transition: all 0.2s ease-in-out;
+}
+
+.card-fighter p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 7px;
+}
+
+</style>
