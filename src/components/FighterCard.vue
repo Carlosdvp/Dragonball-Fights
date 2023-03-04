@@ -38,28 +38,28 @@ export default {
         <div class="gauge-bar">
           <div
             class="gauge-bar-fill"
-            :style="{ width: attackFillwidth + '%' }"
+            :style="{ width: (attackFillwidth/2) + '%' }"
           ></div>
         </div>
         <p>Defense</p>
         <div class="gauge-bar">
           <div
             class="gauge-bar-fill"
-            :style="{ width: defenseFillwidth + '%' }"
+            :style="{ width: (defenseFillwidth/2) + '%' }"
           ></div>
         </div>
         <p>HP</p>
         <div class="gauge-bar">
           <div
             class="gauge-bar-fill"
-            :style="{ width: hpFillwidth + '%' }"
+            :style="{ width: (hpFillwidth/2) + '%' }"
           ></div>
         </div>
         <p>Speed</p>
         <div class="gauge-bar">
           <div
             class="gauge-bar-fill"
-            :style="{ width: speedFillwidth + '%' }"
+            :style="{ width: (speedFillwidth/2) + '%' }"
           ></div>
         </div>
       </div>
@@ -89,11 +89,11 @@ export default {
   line-height: 36px;
 }
 
-.monster-image {
+.fighter-image {
   width: 360px;
 }
 
-.monster-details {
+.fighter-details {
   font-size: 14px;
 }
 
@@ -115,7 +115,7 @@ export default {
   left: 0;
 }
 
-.greetings h1,
+/*.greetings h1,
 .greetings h3 {
   text-align: center;
 }
@@ -125,5 +125,5 @@ export default {
   .greetings h3 {
     text-align: left;
   }
-}
+}*/
 </style>
