@@ -1,5 +1,5 @@
 <script>
-import DragonballFight from './components/DragonballFight.vue'
+import DragonballFight from './pages/DragonballFight.vue'
 
 export default {
   name: "App",
