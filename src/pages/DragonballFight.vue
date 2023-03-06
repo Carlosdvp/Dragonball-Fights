@@ -79,28 +79,36 @@ export default {
     ...mapActions([
       "updateFightWinner"
     ]),
-    // async startFight() {
-    //   try {
-    //     const response = await fetch(`${API_URL}/battle`, {
-    //       method: "POST",
-    //       body: JSON.stringify({
-    //         monster1Id: this.selectedMonster.id,
-    //         monster2Id: this.computerMonster.id,
-    //       }),
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //     });
-    //     const data = await response.json();
+    async startFight() {
+      const fighter1Id = this.selectedFighter.id;
+      const fighter2Id = this.computerFighter.id;
 
-    //     this.$store.dispatch("monster/updateBattleWinner", data.winner);
-    //   } catch (error) {
-    //     console.error(error);
-    //   }
-    // },
-  },
-  created() {
-    // this.loadFighters();
+      const fighter1 = this.fighters.find((fighter) => fighter.id === fighter1Id);
+      const fighter2 = this.fighters.find((fighter) => fighter.id === fighter2Id);
+
+      const fighter1Sum =
+        fighter1.attack + fighter1.defense + fighter1.hp + fighter1.speed;
+      const fighter2Sum =
+        fighter2.attack + fighter2.defense + fighter2.hp + fighter2.speed;
+
+      if (fighter1Sum > fighter2Sum) {
+        let data = { winner: fighter1, tie: false };
+        this.$store.dispatch('updateFightWinner', data.winner)
+        return data;
+      }
+
+      if (fighter2Sum > fighter1Sum) {
+        let data = { winner: fighter2, tie: false };
+        this.$store.dispatch('updateFightWinner', data.winner)
+        return data;
+      }
+
+      if (fighter1Sum === fighter2Sum) {
+        let data = { winner: null, tie: true };
+        this.$store.dispatch('updateFightWinner', data.winner)
+        return data;
+      }
+    },
   },
 };
 </script>
