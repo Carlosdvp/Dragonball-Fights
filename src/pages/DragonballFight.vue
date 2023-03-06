@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { mapState, mapGetters, mapActions } from 'vuex';
 import FighterList from '@/components/FighterList.vue'
 import FighterCard from '@/components/FighterCard.vue'
 import WinnerDisplay from '@/components/WinnerDisplay.vue'
@@ -32,73 +33,13 @@ export default {
   name: "DragonballFight",
   data() {
     return {
-      defaultFighter: {name: "Player", attack: 0, defense: 0,hp: 0,
-        speed: 0,},
-      fighters: [
-        {
-          id: "fighter-1",
-          name: "Goku",
-          attack: 160,
-          defense: 140,
-          hp: 100,
-          speed: 180,
-          type: "Type",
-          imageUrl: "src/images/goku.png"
-        },
-        {
-          id: "fighter-2",
-          name: "Android 17",
-          attack: 150,
-          defense: 110,
-          hp: 90,
-          speed: 190,
-          type: "Type",
-          imageUrl: "src/images/android17.png"
-        },
-        {
-          id: "fighter-3",
-          name: "Cell",
-          attack: 120,
-          defense: 120,
-          hp: 200,
-          speed: 100,
-          type: "Type",
-          imageUrl: "src/images/cell.jpg"
-        },
-        {
-          id: "fighter-4",
-          name: "Freeza",
-          attack: 110,
-          defense: 90,
-          hp: 90,
-          speed: 80,
-          type: "Type",
-          imageUrl: "src/images/freeza.jpg"
-        },
-        {
-          id: "fighter-5",
-          name: "Vegeta",
-          attack: 170,
-          defense: 130,
-          hp: 100,
-          speed: 170,
-          type: "Type",
-          imageUrl: "src/images/vegeta.png"
-        },
-        {
-          id: "fighter-6",
-          name: "Kefla",
-          attack: 120,
-          defense: 130,
-          hp: 90,
-          speed: 130,
-          type: "Type",
-          imageUrl: "src/images/kefla.jpg"
-        },
-      ],
-      selectedFighterId: undefined,
-      selectedFighter: undefined,
-      fightWinner: undefined
+      defaultFighter: {
+        name: "Player", 
+        attack: 0, 
+        defense: 0,
+        hp: 0,
+        speed: 0,
+      },
     };
   },
   components: {
@@ -107,14 +48,17 @@ export default {
     WinnerDisplay
   },
   computed: {
-    // ...mapState("monster", [
-    //   "selectedMonsterId",
-    //   "selectedMonster",
-    //   "battleWinner",
-    // ]),
-    // ...mapGetters("fighter", ["getFighters"]),
+    ...mapState([
+      "fighters",
+      "selectedFighterId",
+      "selectedFighter",
+      "fightWinner"
+    ]),
+    ...mapGetters([
+      "getFighters"
+    ]),
     fighters() {
-      return this.fighters;
+      return this.getFighters;
     },
     showWinner() {
       return this.fightWinner !== undefined;
@@ -132,7 +76,9 @@ export default {
     },
   },
   methods: {
-    // ...mapActions("monster", ["loadMonsters", "updateBattleWinner"]),
+    ...mapActions([
+      "updateFightWinner"
+    ]),
     // async startFight() {
     //   try {
     //     const response = await fetch(`${API_URL}/battle`, {
