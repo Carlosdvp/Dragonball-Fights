@@ -86,7 +86,7 @@ export default {
   box-sizing: border-box;
   border-radius: 7px;
   padding: 7px !important;
-/*  box-shadow: $box-shadow;*/
+  box-shadow: -2px 3px 10px lightslategray;
   transition: all 0.2s ease-in-out;
 }
 

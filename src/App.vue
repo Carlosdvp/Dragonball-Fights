@@ -12,3 +12,13 @@ export default {
 <template>
   <DragonballFight />
 </template>
+
+<style>
+
+#app {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+</style>

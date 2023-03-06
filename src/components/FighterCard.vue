@@ -13,16 +13,16 @@ export default {
   },
   computed: {
     attackFillwidth() {
-      return (this.fighter.attack / 100) * 100;
+      return (this.fighter.attack);
     },
     defenseFillwidth() {
-      return (this.fighter.defense / 100) * 100;
+      return (this.fighter.defense);
     },
     hpFillwidth() {
-      return (this.fighter.hp / 100) * 100;
+      return (this.fighter.hp);
     },
     speedFillwidth() {
-      return (this.fighter.speed / 100) * 100;
+      return (this.fighter.speed);
     },
   }
 }
@@ -31,8 +31,8 @@ export default {
 <template>
   <div>
     <v-card class="fighter-card-player">
-      <img class="fighter-image centralized" :src="fighter.imageUrl" />
-      <div class="fight-details">
+      <img class="fighter-image" :src="fighter.imageUrl" />
+      <div class="fighter-details">
         <p class="title">{{ title }}</p>
         <p>Attack</p>
         <div class="gauge-bar">
@@ -69,17 +69,10 @@ export default {
 
 <style scoped>
 .battle-card-player {
-  padding: 13px 11px;
   height: 415px;
   flex-direction: column;
   border-radius: 7px;
-/*  box-shadow: $box-shadow;*/
-}
-
-.centralized {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: -2px 3px 10px lightblue;
 }
 
 .title {
@@ -90,11 +83,12 @@ export default {
 }
 
 .fighter-image {
-  width: 360px;
+  width: 100%;
 }
 
 .fighter-details {
   font-size: 14px;
+  padding: 14px;
 }
 
 .gauge-bar {
@@ -115,15 +109,4 @@ export default {
   left: 0;
 }
 
-/*.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}*/
 </style>

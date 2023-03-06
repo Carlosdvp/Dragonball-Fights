@@ -16,7 +16,7 @@
         :class="[{ inactive: !selectedFighterId }]"
         @click="startFight"
       >
-        Start Fight
+        <p id="btn-content">Start Fight</p>
       </v-btn>
       <FighterCard title="Computer" :fighter="computerFighter" />
     </div>
@@ -120,7 +120,7 @@ export default {
   flex-direction: column;
   gap: 35px;
   margin: 0 auto;
-  max-width: 814px;
+  max-width: 100%;
 }
 
 .main-title {
@@ -144,15 +144,14 @@ export default {
   font-size: 18px;
   line-height: 21px;
   text-transform: capitalize;
-  padding: 12px 30px;
-/*  box-shadow: $box-shadow-button;*/
+  box-shadow: 0px 2px 2px whitesmoke;
   pointer-events: visible;
-  height: 45px;
-  background-color: darkblue;
+  background-color: #23a0a0;;
+  height: 20px;
 }
 
 .v-btn--disabled.start-battle-button.inactive {
-  background-color: darkgreen;
+  background-color: darkslategray;
   color: white;
 }
 </style>

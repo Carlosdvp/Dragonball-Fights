@@ -13,21 +13,18 @@ export default {
       required: false,
     },
   },
-  computed: {
-    // ...mapState("monster", ["battleWinner"]),
-  },
 };
 </script>
 
 <style scoped>
 
 .winner-box {
-/*  background: $winner-background;*/
-  border: 1px solid black;
-/*  box-shadow: $box-shadow;*/
+  background: darkslateblue;
+  border: 1px solid darkblue;
+  box-shadow: 0px 4px 4px lightslategray;
   border-radius: 4px;
   padding: 17px 28px;
-  align-content: center;
+  text-align: center;
 }
 
 .message-winner {
@@ -35,5 +32,6 @@ export default {
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  color:whitesmoke;
 }
 </style>
