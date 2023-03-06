@@ -10,18 +10,27 @@ export default {
   },
   data() {
     return {
-      selectedFighterId: null
+      selectedFighterId: null,
+      selectedFighter: null
     }
   },
   methods: {
+    setSelectedFighterId(id) {
+      this.selectedFighterId = id;
+    },
+    setSelectedFighter(fighter) {
+      this.selectedFighter = fighter;
+    },
+    resetGame() { },
     handleFighterClick(fighter) {
       const correctFighter =
         this.selectedFighterId !== fighter.id ? fighter : null;
       this.selectedFighterId = correctFighter?.id ?? null;
-      this.selectedFighterId(correctFighter?.id ?? null);
-      this.selectedFighter(correctFighter ?? null);
-
+      this.setSelectedFighterId(correctFighter?.id ?? null);
+      this.setSelectedFighter(correctFighter ?? null);
       this.resetGame();
+
+      console.log('in the click handler', this.selectedFighterId)
     }
   }
 }
