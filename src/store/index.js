@@ -11,7 +11,7 @@ export default createStore({
           hp: 100,
           speed: 180,
           type: "Type",
-          imageUrl: "src/images/goku.png"
+          imageUrl: "./images/goku.png"
         },
         {
           id: "fighter-2",
@@ -21,7 +21,7 @@ export default createStore({
           hp: 90,
           speed: 190,
           type: "Type",
-          imageUrl: "src/images/android17.png"
+          imageUrl: "./images/android17.png"
         },
         {
           id: "fighter-3",
@@ -31,7 +31,7 @@ export default createStore({
           hp: 200,
           speed: 100,
           type: "Type",
-          imageUrl: "src/images/cell.jpg"
+          imageUrl: "./images/cell.jpg"
         },
         {
           id: "fighter-4",
@@ -41,7 +41,7 @@ export default createStore({
           hp: 90,
           speed: 80,
           type: "Type",
-          imageUrl: "src/images/freeza.jpg"
+          imageUrl: "./images/freeza.jpg"
         },
         {
           id: "fighter-5",
@@ -51,7 +51,7 @@ export default createStore({
           hp: 100,
           speed: 170,
           type: "Type",
-          imageUrl: "src/images/vegeta.png"
+          imageUrl: "./images/vegeta.png"
         },
         {
           id: "fighter-6",
@@ -61,7 +61,7 @@ export default createStore({
           hp: 90,
           speed: 130,
           type: "Type",
-          imageUrl: "src/images/kefla.jpg"
+          imageUrl: "./images/kefla.jpg"
         },
       ],
     selectedFighterId: undefined,
